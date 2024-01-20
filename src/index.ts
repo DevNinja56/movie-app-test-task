@@ -7,6 +7,7 @@ import mongoose from "mongoose"
 
 import config from "./configurations/config"
 import logging from "./configurations/logging"
+import AuthRoutes from "./routes/auth.route"
 
 const app: Express = express()
 
@@ -77,6 +78,9 @@ app.get(config.SERVER.API_PREFIX, (req: Request, res: Response) => {
 app.get(config.SERVER.API_PREFIX, (req: Request, res: Response) => {
   res.json({ message: "Welcome to Movie-App-Backend Application." })
 })
+
+// Routes
+app.use(config.SERVER.API_PREFIX, AuthRoutes)
 
 const httpServer = http.createServer(app)
 

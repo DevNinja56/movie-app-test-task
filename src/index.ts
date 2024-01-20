@@ -8,8 +8,9 @@ import mongoose from "mongoose"
 import config from "./configurations/config"
 import logging from "./configurations/logging"
 import AuthRoutes from "./routes/auth.route"
-import FavoriteRoutes from "./routes/favorite.route"
 import UserRoutes from "./routes/user.route"
+import FavoriteRoutes from "./routes/favorite.route"
+import MovieRoutes from "./routes/movie.route"
 
 const app: Express = express()
 
@@ -85,6 +86,7 @@ app.get(config.SERVER.API_PREFIX, (req: Request, res: Response) => {
 app.use(config.SERVER.API_PREFIX, AuthRoutes)
 app.use(config.SERVER.API_PREFIX, UserRoutes)
 app.use(config.SERVER.API_PREFIX, FavoriteRoutes)
+app.use(config.SERVER.API_PREFIX, MovieRoutes)
 
 const httpServer = http.createServer(app)
 

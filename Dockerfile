@@ -14,5 +14,5 @@ RUN npm install --production
 COPY --from=builder /backend-app/dist ./dist
 COPY . .
 
-EXPOSE 3000
+EXPOSE 4000
 CMD [ "node", "dist/index.js" ]

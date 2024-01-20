@@ -9,7 +9,7 @@ dist/
 yarn.lock
 package-lock.json
 public/
-db
+db/
 
 # Environment files
 .env

@@ -44,3 +44,37 @@ To stop the services:
 ```bash
 docker-compose down
 ```
+
+## Application Details
+
+The Movie App incorporates various features and technologies:
+
+- **Express Framework with TypeScript**: Empowers robust server-side development with a typed approach.
+- **MongoDB**: Utilized for efficient database storage.
+- **JWT Authentication**: Ensures secure user authentication.
+- **Middleware**: Handles common functionalities seamlessly.
+- **Modules**:
+  - **Authentication Module**: Manages user authentication.
+  - **User Module**: Provides functionalities related to users.
+  - **Favorite List Module**: Enables users to manage their favorite movies.
+  - **Movie Module**: Harnesses the power of 3rd-party Rapid APIs for data retrieval.
+
+## 3rd Party Rapid APIs
+
+The Movie App leverages the following Rapid APIs:
+
+1. **Movies-Verse API**:
+
+   - **Get All Movies Endpoint**: Used to fetch a list of movies.
+   - API Link: [Movies-Verse API](https://moviesverse1.p.rapidapi.com/movies)
+
+2. **IMDB APIs**:
+   - **Search Movie Endpoint**: Used for searching movies.
+     - API Link: [IMDB Search API](https://imdb146.p.rapidapi.com/v1/find)
+   - **Get Movie Detail Endpoint**: Retrieves detailed information about a specific movie.
+     - API Link: [IMDB Movie Detail API](https://imdb146.p.rapidapi.com/v1/title)
+
+## Postman Collection
+
+Explore the Movie App API endpoints using the Postman Collection:
+[Postman Collection](https://elements.getpostman.com/redirect?entityId=18274123-28c5f4bd-4aa4-4fc8-81ad-bb5af194c9e9&entityType=collection)

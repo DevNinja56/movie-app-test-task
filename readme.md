@@ -16,19 +16,19 @@ Ensure you have Docker and Docker Compose installed on your system.
 Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/Movie-App-Test-Task.git
+git clone https://github.com/YOUR-USERNAME/Movie-App-Test-Task.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd Movie-App-Test-Task
+cd movie-App-Test-Task
 ```
 
-Build and run the Docker containers:
+Create Docker Network:
 
 ```bash
-docker-compose up -d
+docker network create my_network
 ```
 
 Build and run the Docker containers:

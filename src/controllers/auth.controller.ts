@@ -45,7 +45,8 @@ const signIn = async (req: Request, res: Response) => {
     if (!findUser) {
       return res.status(406).json({
         status: false,
-        message: "Invalid Credentials"
+        message: "Invalid Credentials",
+        data: null
       })
     }
 
@@ -54,7 +55,8 @@ const signIn = async (req: Request, res: Response) => {
     if (!comparePassword) {
       return res.status(406).json({
         status: false,
-        message: "Invalid Credentials"
+        message: "Invalid Credentials",
+        data: null
       })
     }
 
@@ -68,7 +70,8 @@ const signIn = async (req: Request, res: Response) => {
   } catch (error: unknown) {
     return res.status(500).json({
       status: false,
-      message: (error as Error).message
+      message: (error as Error).message,
+      data: null
     })
   }
 }
@@ -85,7 +88,8 @@ const verifyUser = async (req: Request | any, res: Response) => {
   } catch (error: unknown) {
     res.status(500).json({
       status: false,
-      message: (error as Error).message
+      message: (error as Error).message,
+      data: null
     })
   }
 }

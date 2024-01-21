@@ -11,18 +11,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "4000:4000"
-    environment:
-      NODE_ENV: production
-      MONGO_URL: mongodb://admin:password@mongo:27017?authSource=admin
-      TOKEN_SECRET: ry:a3.bp@dw%34I&IY&IYI&TUI&TU^&TT*&G*&G&^T
-      JWT_EXPIRE_TOKEN: 180d
-      MOVIE_VERSE_URL: https://moviesverse1.p.rapidapi.com/movies
-      MOVIE_VERSE_API_KEY: 8dadd0d726msh6b7dd9393dfab41p144c98jsne6052fad56c1
-      MOVIE_VERSE_API_HOST: moviesverse1.p.rapidapi.com
-      IMDB_URL: https://imdb146.p.rapidapi.com/v1/find
-      IMDB_MOVIE_DETAIL_URL: https://imdb146.p.rapidapi.com/v1/title
-      IMDB_API_KEY: 8dadd0d726msh6b7dd9393dfab41p144c98jsne6052fad56c1
-      IMDB_API_HOST: imdb146.p.rapidapi.co
     depends_on:
       - mongo
     env_file:

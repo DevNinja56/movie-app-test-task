@@ -15,7 +15,8 @@ const VerifyToken = async (req: RequestWithUser, res: Response, next: NextFuncti
   if (!token) {
     return res.status(401).json({
       status: false,
-      message: "Not authorized to access this route"
+      message: "Not authorized to access this route",
+      data: null
     })
   }
 
@@ -30,9 +31,10 @@ const VerifyToken = async (req: RequestWithUser, res: Response, next: NextFuncti
 
     next()
   } catch (error: unknown) {
-    return res.status(401).json({
+    return res.status(500).json({
       status: false,
-      message: "Not authorized to access this route"
+      message: (error as Error).message,
+      data: null
     })
   }
 }

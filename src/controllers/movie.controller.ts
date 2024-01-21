@@ -50,7 +50,7 @@ const searchMovieByName = async (req: Request, res: Response) => {
     return res.status(200).json({
       status: true,
       message: "Movie found successfully",
-      data: onSearchMovieApi(text as string)
+      data: await onSearchMovieApi(text as string)
     })
   } catch (error: unknown) {
     return res.status(500).json({

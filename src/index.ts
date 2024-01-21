@@ -72,14 +72,7 @@ app.use((req, res, next) => {
 // Base routes
 
 app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Welcome to Movie-App-Backend Application." })
-})
-app.get(config.SERVER.API_PREFIX, (req: Request, res: Response) => {
-  res.json({ message: "Welcome to Movie-App-Backend Application." })
-})
-
-app.get(config.SERVER.API_PREFIX, (req: Request, res: Response) => {
-  res.json({ message: "Welcome to Movie-App-Backend Application." })
+  res.json({ status: true, message: "Welcome to Movie-App-Backend Application.", data: null })
 })
 
 // Routes
